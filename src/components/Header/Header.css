@@ -1,8 +1,5 @@
 .navbar-custom {
-  background-color: black;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  background-color: #12111f;
   font-weight: bold;
   font-size: 18px;
 }

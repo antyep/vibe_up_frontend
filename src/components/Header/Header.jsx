@@ -31,8 +31,7 @@ export const Header = () => {
         </div>
         <div className="navbar-right">
           <Link to="/">Home</Link>
-          <Link to="Artists">Artists</Link>
-          <Link to="Contact">Contact</Link>
+          <Link to="/">Feed</Link>
           {!token && (
             <>
               <Link to="/login">Sign In</Link>
