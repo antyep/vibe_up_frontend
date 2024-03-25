@@ -1,0 +1,45 @@
+.admin-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.list {
+  display: flex;
+  height: 100%;
+  width: 30em;
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+}
+
+.search-input-container {
+  display: flex;
+  flex-direction: row;
+  height: 45px;
+}
+
+.pagination-buttons-container {
+  display: flex;
+}
+.filters-button {
+  padding: 0 20px;
+}
+
+.userRow {
+  width: 100%;
+  background-color: burlywood;
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+.userDetail {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  height: 100%;
+  width: 50em;
+  background-color: rgb(247, 247, 247);
+}

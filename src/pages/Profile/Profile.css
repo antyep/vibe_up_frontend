@@ -1,0 +1,14 @@
+.profile-wrapper {
+}
+
+.profile-content {
+  padding-top: 120px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.profile-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}

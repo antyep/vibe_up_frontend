@@ -1,0 +1,63 @@
+.appointments-wrapper {
+  max-width: 420px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+.appointments-title {
+  margin-bottom: 20px;
+}
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.appointments-list-item {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.item-name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.delete-appointment-button {
+  border: 1px solid #222;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 32px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  transition: all 0.2s;
+}
+
+.appointments-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-username {
+  font-weight: 500;
+}
+.item-email {
+}
