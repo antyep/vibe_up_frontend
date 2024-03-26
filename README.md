@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 generic button for submitting:
 
 <!-- HTML !-->
@@ -39,3 +40,6 @@ opacity: .75;
 }
 
 login form:
+=======
+# vibe_up_frontend
+>>>>>>> 3c715d68f872c4dc26fafbc3c292aa23d364f3b2
