@@ -8,7 +8,16 @@ export const CreatePostForm = ({ onPost }) => {
   const [songs, setSongs] = useState([]);
   const [message, setMessage] = useState("");
 
+  const isValid = (message) => {
+    return message.trim().length > 0;
+  };
+
   const handleSubmit = () => {
+    if (!isValid(message)) {
+      console.error("Field message cannot be empty");
+      return;
+    }
+
     const postData = {
       caption: message,
     };
@@ -37,8 +46,6 @@ export const CreatePostForm = ({ onPost }) => {
   const handleChangeMessage = (e) => {
     setMessage(e.target.value);
   };
-
-  // const isValid = @todo: chequear que haya valores validos para no mandar post vacio
 
   return (
     <div>
