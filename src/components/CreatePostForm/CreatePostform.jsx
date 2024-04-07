@@ -61,13 +61,18 @@ export const CreatePostForm = ({ onPost }) => {
   };
 
   return (
-    <div>
-      hola
+    <div className="post-creation container">
+      <span>
+        <h3>New post</h3>
+      </span>
       <div>
         <div>
-          <label htmlFor="songs">Choose a song: </label>
+          <label htmlFor="songs" className="song-picker">
+            Choose the song you would like to share{" "}
+          </label>
         </div>
         <select
+          className="song-selector"
           name="songs"
           id="songs"
           onChange={handleSongChange}
@@ -86,11 +91,19 @@ export const CreatePostForm = ({ onPost }) => {
       </div>
       <div>
         <div>
-          <label htmlFor="message">Message</label>
+          <label htmlFor="hello" className="caption-message">
+            Spread your message here
+          </label>
         </div>
-        <textarea value={message} onChange={handleChangeMessage} />
+        <textarea
+          value={message}
+          onChange={handleChangeMessage}
+          className="caption-textarea"
+        />
       </div>
-      <button onClick={handleSubmit}>Create post</button>
+      <button className="button" onClick={handleSubmit}>
+        Create new post
+      </button>
     </div>
   );
 };
