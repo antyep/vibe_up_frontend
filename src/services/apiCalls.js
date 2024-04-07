@@ -70,3 +70,47 @@ export const deleteUserAdmin = async (token, userId) => {
   const res = await axios.delete(`/api/users/${userId}`, config);
   return res.data;
 };
+
+// SONGS
+
+export const getAllSongs = async (token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const res = await axios.get("/api/songs", config);
+  return res.data;
+};
+
+// POSTS
+
+export const createPost = async (token, postData) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const res = await axios.post("/api/posts", postData, config);
+  return res.data;
+};
+
+export const getAllPosts = async (token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const res = await axios.get("/api/posts", config);
+  return res.data;
+};
+
+export const deletePost = async (token, postId) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const res = await axios.delete(`/api/posts/${postId}`, config);
+  return res.data;
+};
