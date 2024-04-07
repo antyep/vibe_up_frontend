@@ -4,7 +4,7 @@ import { Home } from "./Home/Home";
 import { Login } from "./Login/Login";
 import { Profile } from "./Profile/Profile";
 import { Admin } from "./Admin/Admin";
-import { Feed } from "../components/Feed/Feed";
+import { Feed } from "./Feed/Feed";
 
 export const MainRouter = () => {
   return (
