@@ -18,7 +18,7 @@ export const Register = () => {
   });
   const [showModal, setShowModal] = useState(false);
   const [registerSuccessful, setRegisterSuccessful] = useState(false);
-  const [validationError, setValidationError] = useState(""); // Nuevo estado para el mensaje de error de validación
+  const [validationError, setValidationError] = useState("");
   const navigate = useNavigate();
 
   const inputHandler = (event) => {

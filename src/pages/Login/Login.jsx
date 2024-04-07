@@ -19,7 +19,7 @@ export const Login = () => {
     errorMessage: "",
   });
   const [smShow, setSmShow] = useState(false);
-  const [validationError, setValidationError] = useState(""); // Nuevo estado para el mensaje de error de validación
+  const [validationError, setValidationError] = useState("");
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
