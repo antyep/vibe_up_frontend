@@ -7,7 +7,6 @@ import { userData } from "../../pages/userSlice";
 export const CreatePostForm = ({ onPost }) => {
   const [songs, setSongs] = useState([]);
   const [message, setMessage] = useState("");
-  const [selectedSong, setSelectedSong] = useState({});
 
   const handleSubmit = () => {
     // @todo: create post endpoint connection
@@ -48,9 +47,7 @@ export const CreatePostForm = ({ onPost }) => {
         <select
           name="songs"
           id="songs"
-          onChange={(e) =>
-            setSelectedSong(songs.find((song) => song.name === e.target.value))
-          }
+          onChange={(e) => songs.find((song) => song.name === e.target.value)}
         >
           {songs &&
             songs.map((song) => {
