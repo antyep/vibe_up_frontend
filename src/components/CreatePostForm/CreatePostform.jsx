@@ -4,8 +4,11 @@ import { useSelector } from "react-redux";
 import { createPost, getAllSongs } from "../../services/apiCalls";
 import { userData } from "../../pages/userSlice";
 
+// Todo: modals
+
 export const CreatePostForm = ({ onPost }) => {
   const [songs, setSongs] = useState([]);
+  const [selectedSong, setSelectedSong] = useState(null);
   const [message, setMessage] = useState("");
 
   const isValid = (message) => {
@@ -17,15 +20,21 @@ export const CreatePostForm = ({ onPost }) => {
       console.error("Field message cannot be empty");
       return;
     }
+    if (!selectedSong) {
+      console.error("Song must be selected");
+      return;
+    }
 
     const postData = {
       caption: message,
+      song: selectedSong,
     };
 
     createPost(token, postData)
       .then((response) => {
         console.log("Post created successfully:", response);
         if (onPost) onPost();
+        setMessage("");
       })
       .catch((error) => {
         console.error("Error while creating post:", error);
@@ -47,6 +56,10 @@ export const CreatePostForm = ({ onPost }) => {
     setMessage(e.target.value);
   };
 
+  const handleSongChange = (e) => {
+    setSelectedSong(e.target.value);
+  };
+
   return (
     <div>
       hola
@@ -57,12 +70,14 @@ export const CreatePostForm = ({ onPost }) => {
         <select
           name="songs"
           id="songs"
-          onChange={(e) => songs.find((song) => song.name === e.target.value)}
+          onChange={handleSongChange}
+          value={selectedSong}
         >
+          <option>Select a song...</option>
           {songs &&
             songs.map((song) => {
               return (
-                <option key={song.name} value={songs.name}>
+                <option key={song.name} value={song.id}>
                   {song.name} - {song.author}
                 </option>
               );
