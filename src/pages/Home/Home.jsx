@@ -1,15 +1,20 @@
+import { useState } from "react";
 import { CreatePostForm } from "../../components/CreatePostForm/CreatePostform";
 import { PostsFeed } from "../../components/PostsFeed/PostsFeed";
 
 import "./Home.css";
 
 export const Home = () => {
-  const refreshPage = () => console.log("Refreshed");
+  const [seed, setSeed] = useState(1);
+
+  const reset = () => {
+    setSeed(Math.random());
+  };
 
   return (
     <div className="home-wrapper">
-      <CreatePostForm onPost={refreshPage} />
-      <PostsFeed />
+      <CreatePostForm onPost={reset} />
+      <PostsFeed key={seed} />
       {/*     
 
 // Feed

@@ -114,3 +114,13 @@ export const deletePost = async (token, postId) => {
   const res = await axios.delete(`/api/posts/${postId}`, config);
   return res.data;
 };
+
+export const likePost = async (token, postId) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const res = await axios.post(`/api/posts/like/${postId}`, null, config);
+  return res.data;
+};
