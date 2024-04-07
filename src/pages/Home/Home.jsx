@@ -1,10 +1,10 @@
-import { CreatePostForm } from "../../components/CreatePostForm/CreatePostForm";
+import { CreatePostForm } from "../../components/CreatePostForm/CreatePostform";
 import { PostsFeed } from "../../components/PostsFeed/PostsFeed";
 
 import "./Home.css";
 
 export const Home = () => {
-  const refreshPage = () => console.log("refresca o algo");
+  const refreshPage = () => console.log("Refreshed");
 
   return (
     <div className="home-wrapper">

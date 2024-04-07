@@ -1,7 +1,7 @@
 import "./CreatePostform.css";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { getAllSongs } from "../../services/apiCalls";
+import { createPost, getAllSongs } from "../../services/apiCalls";
 import { userData } from "../../pages/userSlice";
 
 export const CreatePostForm = ({ onPost }) => {
@@ -9,11 +9,18 @@ export const CreatePostForm = ({ onPost }) => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = () => {
-    // @todo: create post endpoint connection
-    // createPost(token, postData)
-    // .then(() => {
-    //     if (onPost) onPost();
-    // })
+    const postData = {
+      caption: message,
+    };
+
+    createPost(token, postData)
+      .then((response) => {
+        console.log("Post created successfully:", response);
+        if (onPost) onPost();
+      })
+      .catch((error) => {
+        console.error("Error while creating post:", error);
+      });
   };
 
   const userRdxData = useSelector(userData);
@@ -30,10 +37,6 @@ export const CreatePostForm = ({ onPost }) => {
   const handleChangeMessage = (e) => {
     setMessage(e.target.value);
   };
-
-  //   // @todo: get songs from api
-  //   // getSongs().then((res) => setSongs(res.songs));
-  // }, [token]);
 
   // const isValid = @todo: chequear que haya valores validos para no mandar post vacio
 
