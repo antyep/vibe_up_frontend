@@ -23,10 +23,10 @@ The goal of this project is to create a functional Front End API, emulating a so
 3. Configure the backend:
 
 ```bash
-  All the instructions are available in the following repository: https://github.com/antyep/vibe_up_backend
+  All the instructions are available here: https://github.com/antyep/vibe_up_backend
 ```
 
-4. Run the API in the terminal once the backend is install and running:
+4. Run the API in the terminal once the backend is installed and running:
    
 ```bash
   npm run dev
